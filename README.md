@@ -1,8 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Worker Profile – Mobile Screen Implementation
+
+This project is a **Next.js (App Router)** implementation of the provided Figma mobile design.  
+It showcases a **worker’s profile page** with sections such as personal info, caregiving experience, expectations, and work history.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/maidmatch-profile.git
+cd maidmatch-profile
+npm install
+
+```
+
+### 2. Environment Setup
+
+Create a **.env.local** file in the root of your project and add the following variables:
+
+- API_URL="https://adminapi.maidmatch.ai/api/worker-detail"
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
@@ -14,23 +34,35 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design Improvements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+While implementing the Figma design, I made the following adjustments to ensure consistency and proper functionality:
 
-## Learn More
+- **Work Experience Section**
 
-To learn more about Next.js, take a look at the following resources:
+  - Fixed text color mismatch in the second entry.
+  - Corrected spacing between entries to match the Figma layout.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Accordion Component**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  - Added scroll-to-view behavior so expanded content is always visible.
 
-## Deploy on Vercel
+- **Images**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - Implemented fallback images for missing API data.
+  - Set main skills images to a uniform width and height.
+  - Removed background from button image for a clean Figma-style view.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Metadata & Open Graph**
+
+  - Configured dynamic titles and image previews for user profiles.
+  - Added domain configuration for proper Open Graph preview on Next.js.
+
+- **Data Handling**
+
+  - Used dummy data where API responses lacked enough content for display.
+
+- **Responsiveness & Layout**
+  - Enforced a fluid design with max 375px width, centered across all screen sizes.
