@@ -10,8 +10,8 @@ It showcases a **worker’s profile page** with sections such as personal info, 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/maidmatch-profile.git
-cd maidmatch-profile
+git clone https://github.com/VishvaGujarati/my-worker-profile
+cd my-worker-profile
 npm install
 
 ```
